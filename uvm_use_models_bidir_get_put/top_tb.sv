@@ -25,8 +25,7 @@
 // It includes a bidirectional slave DUT, and the bus transactions are reported to
 // the transcript.
 //
-`define uvm_record_field(NAME,VALUE) \
-  $add_attribute(recorder.tr_handle,VALUE,NAME);
+`define uvm_record_field(NAME,VALUE)
 
 package bidirect_bus_pkg;
 

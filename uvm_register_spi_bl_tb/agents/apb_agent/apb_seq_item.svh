@@ -18,8 +18,7 @@
 //------------------------------------------------------------
 // Questa recording macro:
 
-`define uvm_record_field(NAME,VALUE) \
-   $add_attribute(recorder.get_handle(),VALUE,NAME);
+`define uvm_record_field(NAME,VALUE)
 
 //
 // Class Description:
