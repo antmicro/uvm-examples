@@ -1,0 +1,52 @@
+This directory tree contains the UART block level environment from Verification Academy
+Coverage Cookbook
+
+***Please note that the UART RTL is supplied as an example only, it is not intended to be used as
+design IP in a real design. Mentor Graphics will not accept any liability if the UART RTL is
+used in a design or end product.
+
+The content of the example is as follows:
+
+agents/apb_agent - APB agent used in the UVM testbench
+agents/uart_agent - UART agent user in the UVM testbench
+agents/modem_agent - UART Modem interface agent, used in the UVM testbench
+docs
+protocol_monitor - contains an example APB protocol monitor
+rtl - Contains the UART RTL source code***
+sim - Simulation directory for the example, contains the Makefile
+uvm_tb/tb - Top level testbench
+uvm_tb/tests
+uvm_tb/virtual_sequences
+uvm_tb/sequences
+uvm_tb/register_model
+uvm_tb/env - contains the functional coverage monitors described in the cookbook
+
+To compile and run the example under Questa:
+
+cd sim
+make
+
+This will compile the UART RTL and the UVM testbench and then run the following simulations in
+batch mode:
+
+word_format_poll - Checks that the UART transmits and receives correctly with no interrupts
+modem_poll - Checks the modem interface using polling
+word_format_int - Checks that the UART transmits and receives correctly using interrupts
+modem_int - Checks the modem interface interrupt operation
+baud_rate - Checks the baud rate generator
+uart_regs - Checks the UART register accesses
+
+Each simulation will generate a log file and a Questa ucdb file with the code and functional 
+coverage results.
+
+To run the tests individually, the make targets are as follows:
+
+make sim_word_format_poll
+make sim_word_format_int
+make sim_modem_poll
+make sim_modem_int
+make sim_baud_rate 
+make sim_uart_regs
+
+Note that the total coverage attained is not 100%, that is left as an exercise for the reader
+

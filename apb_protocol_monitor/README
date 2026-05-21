@@ -1,0 +1,18 @@
+This directory contains an example protocol monitor from the Verification 
+Academy coverage cookbook. There is also a testbench which is intended as an
+example that users can run to see what the monitor does.
+
+To run the example:
+
+cd sim
+make
+
+The Makefile in the sim directory will compile and simulate the testbench
+containing the monitor in Questa. If the process is successful there will be
+a UVM_TEST_PASSED message issued at the end of the simulation.
+
+If you would like to run the simulation interactively in the Questa GUI so
+that you can look at waveforms, assertions, covergroups etc:
+
+make simgui
+
