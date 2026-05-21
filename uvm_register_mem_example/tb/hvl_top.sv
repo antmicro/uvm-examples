@@ -26,7 +26,7 @@ module hvl_top;
 
   // UVM initial block: run_test()
   initial begin
-    run_test();
+    run_test("mem_ss_test");
   end
 
 endmodule
