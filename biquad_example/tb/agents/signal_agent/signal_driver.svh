@@ -17,9 +17,6 @@
 //   permissions and limitations under the License.
 //------------------------------------------------------------
 
-timeunit 1ns;
-timeprecision 1ps;
-
 class signal_driver extends uvm_driver #(signal_seq_item);
 
 
